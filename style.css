@@ -1,0 +1,124 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #ffffff; 
+    color: #000000; 
+    padding: 0px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px 0px 15px; 
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+img{
+    border-top-left-radius: 10px;   
+    border-top-right-radius: 10px;
+    border: 5px solid black;
+    width: 100%;
+    
+  }
+figcaption{
+    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    margin-top: -8px;
+    width: auto;
+    margin-right: -9.5px;
+    
+    
+}
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media only screen and (min-width: 772px){
+ .grid{
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    
+    
+}
+img{
+     height: 320px;
+     width: 320px;
+     border-radius: 50%;
+     background-size: cover;
+     display: inline-block;
+     width: 90%;
+ }
+ figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+ }
+ figcaption{
+    margin: 0;
+    width: 48%;
+    margin-top: -29px;
+    padding: 2px;
+
+ }
+ .grid-item:last-child {
+    
+    grid-column: span 2;
+   
+}
+}
+
+@media only screen and (min-width: 992px){
+    .grid-item:nth-child(3n) {
+        grid-column: span 2;
+    }
+    img{
+        
+        
+        border-radius: 15px;
+    }
+    figcaption{
+        margin-top: -35px;
+        width: 90%;
+    }
+    .grid{
+        padding: 30px;
+    }
+}
+@media (prefers-reduce-motion: reduce) {
+    .animated-box {
+        animation: none; 
+        background-color: lightgray; 
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212; /* Dark mode background */
+        color: #ffffff; /* Light text for dark mode */
+    }
+}
